@@ -43,6 +43,7 @@ public class RecyclerActivity extends AppCompatActivity {
 
             Intent recyclerIntent = new Intent(RecyclerActivity.this, DisplayActivity.class);
             intent.putExtra(valueList.toString(), valueList.toString());
+            startActivity(recyclerIntent);
 
         }
 

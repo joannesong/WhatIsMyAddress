@@ -29,9 +29,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(editText.getText().toString(),editText.getText().toString());
-                editor.commit();
-                editText.setText("");
+                if(editText.getText().toString().contains("@") && editText.getText().toString().contains("@") ){
+                    editor.putString(editText.getText().toString(),editText.getText().toString());
+                    editor.commit();
+                    editText.setText("");
+                }
             }
         });
 

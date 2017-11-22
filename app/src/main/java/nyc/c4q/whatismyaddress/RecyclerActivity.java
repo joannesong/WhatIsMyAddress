@@ -17,6 +17,7 @@ import nyc.c4q.whatismyaddress.model.Email;
 public class RecyclerActivity extends AppCompatActivity {
     private SharedPreferences recyclerPrefs;
     private ArrayList<Object> valueList;
+    private List<Email> emails = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +34,10 @@ public class RecyclerActivity extends AppCompatActivity {
         for(Map.Entry<String, ?> entry : allEntries.entrySet()) {
             valueList.add(entry.getValue());
 
-            List<Email> emails = new ArrayList<>();
-            emails.add(new Email(valueList.toString()));
+            for (int i = 0; i <valueList.size(); i++) {
+                valueList.get(i);
+                emails.add(new Email(valueList.get(i).toString()));
+            }
 
             EmailAdapter emailAdapter = new EmailAdapter(emails);
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);

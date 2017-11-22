@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context="nyc.c4q.whatismyaddress.MainActivity">
 
     <EditText
@@ -14,10 +15,12 @@
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/button01"
+        android:text="SAVE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/button02"
+        android:text="EMAIL LIST"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

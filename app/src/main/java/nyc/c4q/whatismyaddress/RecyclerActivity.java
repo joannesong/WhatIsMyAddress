@@ -42,7 +42,7 @@ public class RecyclerActivity extends AppCompatActivity {
             emailRecyclerView.setLayoutManager(linearLayoutManager);
 
             Intent recyclerIntent = new Intent(RecyclerActivity.this, DisplayActivity.class);
-            intent.putExtra(valueList.toString(), valueList.toString());
+            intent.putExtra("VLSTR", valueList.toString());
             startActivity(recyclerIntent);
 
         }
